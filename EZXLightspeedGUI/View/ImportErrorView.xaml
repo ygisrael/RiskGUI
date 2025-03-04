@@ -1,0 +1,45 @@
+﻿<Window x:Class="EZXLightspeedGUI.View.ImportErrorView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prop="clr-namespace:EZXLightspeedGUI.Properties"        
+        WindowStartupLocation="CenterScreen"        
+        WindowState="Normal" WindowStyle="ToolWindow"
+        MinHeight="200" MinWidth="250" MaxWidth="800" MaxHeight="800"
+        Height="350" Width="450"
+        Icon="/EZXAccountRiskGUI;component/Images/App.ico" 
+        Title="{x:Static prop:Resources.ImportErrorWindowTitle}" >
+    <Grid Background="{StaticResource {x:Static SystemColors.MenuBrushKey}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <TextBlock  x:Name="txtMessageTitle" Grid.Row="0" Foreground="Blue" Margin="5,2,5,2"
+                    TextWrapping="Wrap" FontSize="14" Text="Test" />
+        <DataGrid x:Name="dgError" Grid.Row="1" 
+                  Margin="5" FontSize="13" 
+                  CanUserReorderColumns="False"
+                  CanUserAddRows="False" 
+                  CanUserDeleteRows="False"
+                  AutoGenerateColumns="False" 
+                  VerticalScrollBarVisibility="Auto"
+                  >
+            <DataGrid.Columns>
+                <DataGridTemplateColumn  Width="35"
+                            Header="S.No" 
+                            SortMemberPath="SerialNumber"
+                            >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding SerialNumber, StringFormat='#,0.##########'}" HorizontalAlignment="Right"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn Header="Error" Binding="{Binding ErrorMessage}"
+                                    />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="OK" Grid.Row="2" Height="25" Width="80" Margin="5" Click="Button_Click" />
+    </Grid>
+</Window>

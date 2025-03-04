@@ -1,0 +1,119 @@
+﻿<Window x:Class="EZXApexRiskGUI.View.ApplicationSettingsView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prop="clr-namespace:EZXApexRiskGUI.Properties"
+        xmlns:viewModel="clr-namespace:EZXApexRiskGUI.ViewModel"
+        xmlns:properties="clr-namespace:EZXApexRiskGUI.Properties"
+        Width="600" Height="400" ResizeMode="NoResize"
+        Title="{x:Static properties:Resources.ApplicationSettingsWindowTitle}"
+        PreviewKeyDown="Window_PreviewKeyDown" >
+    <Window.DataContext>
+        <viewModel:ApplicationSettingsVM/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <TabControl Grid.Row="0">
+            <TabItem Header="{x:Static prop:Resources.LoginSettingTabTitle}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <GroupBox Header="{x:Static prop:Resources.LoginEditBoxTitle}" Grid.Row="0"
+                              x:Name="NewLoginBlock" Width="360"  
+                              >
+                        <Grid  Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="35"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Margin="2" HorizontalAlignment="Right" Text="{x:Static prop:Resources.LoginCompanyLabel}" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+                            <TextBlock Margin="2" HorizontalAlignment="Right" Text="{x:Static prop:Resources.LoginHostLabel}" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+                            <TextBlock Margin="2" HorizontalAlignment="Right" Text="{x:Static prop:Resources.LoginPortLabel}" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtCompany" Margin="2" Text="{Binding Company}" Grid.Row="0" Grid.Column="1"
+                                       Width="200"
+                                       HorizontalAlignment="Left"/>
+                            <TextBox x:Name="txtHost" Margin="2" Text="{Binding Host}" Grid.Row="1" Grid.Column="1"
+                                       Width="200"
+                                       HorizontalAlignment="Left"/>
+                            <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" Margin="2">
+                                <TextBox x:Name="txtPort" Margin="2" Text="{Binding Port}"
+                                 HorizontalAlignment="Left"
+                                 HorizontalContentAlignment="Right"
+                                 Width="50"/>
+                                <CheckBox x:Name="ChkSSL" Margin="3"
+                                      IsChecked="{Binding Path=IsSSL}"
+                                      VerticalAlignment="Center"
+                                      />
+                                <TextBlock Text="{x:Static prop:Resources.LoginUseSSLLabel}" Margin="2"
+                                      VerticalAlignment="Center"     />
+                            </StackPanel>
+                            <TextBlock Grid.Row="3" Grid.ColumnSpan="2" Text="{Binding ErrorString}" Padding="5" Foreground="Red"/>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="{x:Static prop:Resources.GeneralTabTitle}">
+                <GroupBox BorderThickness="1" Header="{x:Static prop:Resources.LogSettingHeader}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <DataGrid x:Name="dgLoGrid" Grid.Row="0" VerticalAlignment="Top" Margin="5"
+                                  AutoGenerateColumns="False"
+                                  CanUserAddRows="False" 
+                                  CanUserDeleteRows="False" 
+                                  ItemsSource="{Binding Path=LogAppenderInfoList}"
+                                  >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{x:Static prop:Resources.LogNameHeader}" 
+                                                    Binding="{Binding Path=Name}" Width="*" IsReadOnly="True"
+                                                    />
+                                <DataGridCheckBoxColumn Header="{x:Static prop:Resources.LogEnableHeader}"
+                                                    Binding="{Binding Path=Enabled, Mode=TwoWay}" Width="Auto"
+                                                    />
+                                <DataGridComboBoxColumn Header="{x:Static prop:Resources.LogLevelHeader}" Width="120"
+                                                        ItemsSource="{Binding Source={StaticResource AppManager}, Path=LogCategoryList}" 
+                                                        SelectedValuePath="{Binding}" 
+                                                        DisplayMemberPath="{Binding}"
+                                                        SelectedValueBinding="{Binding Level, Mode=TwoWay}"
+                                                    />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <CheckBox Grid.Row="1" Margin="10"
+                                  Content="{x:Static prop:Resources.ApplySettingsForAllSessionsCheckBoxText}" 
+                                  IsChecked="{Binding Path=ApplyLogSettingsForAllSessions, Mode=TwoWay}" />
+                        <StackPanel Orientation="Horizontal" Grid.Row="2">
+                            <TextBlock Text="{x:Static prop:Resources.SyslogHostLable}" Margin="10,10,2,0" VerticalAlignment="Center"/>
+                            <TextBox Text="{Binding SysLogHost}" Width="200" Margin="2,10,0,0"/>
+                        </StackPanel>
+                        <CheckBox Content="Edit change-setting reason / Show popup" Margin="10,20,0,10"  
+                                      x:Name="chkShowRiskSettingReasonPopup" Grid.Row="3"
+                              IsChecked="{Binding Path=ShowChangeSettingPopup, Mode=TwoWay}" />
+
+                    </Grid>
+                </GroupBox>
+            </TabItem>
+        </TabControl>
+        <StackPanel Margin="10,2,10,2" Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Margin="2" Width="80" Height="25" Content="{x:Static prop:Resources.SettingOKButtonLabel}" Click="SettingOKButton_Click" />
+            <Button Margin="2" Width="80" Height="25" Content="{x:Static prop:Resources.SettingApplyButtonLabel}" Command="{Binding ApplySettingsCommand}" />
+            <Button Margin="2" Width="80" Height="25" Content="{x:Static prop:Resources.SettingCancelButtonLabel}" Click="SettingCancelButton_Click" />
+        </StackPanel>
+    </Grid>
+
+</Window>

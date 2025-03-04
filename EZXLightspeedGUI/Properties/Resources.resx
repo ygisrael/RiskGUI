@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ApplicationSettingsWindowTitle" xml:space="preserve">
+    <value>Application Settings</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="ApplySettingsForAllSessionsCheckBoxText" xml:space="preserve">
+    <value>Apply these settings for all UI sessions ?</value>
+    <comment>Log Settings in General Tab</comment>
+  </data>
+  <data name="GeneralTabTitle" xml:space="preserve">
+    <value>General</value>
+    <comment>Login Settings Window</comment>
+  </data>
+  <data name="hgh" xml:space="preserve">
+    <value />
+  </data>
+  <data name="hghf" xml:space="preserve">
+    <value />
+  </data>
+  <data name="jhr" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LogEnableHeader" xml:space="preserve">
+    <value>Enable</value>
+    <comment>Log Settings in General Tab</comment>
+  </data>
+  <data name="LoginButton" xml:space="preserve">
+    <value>Login</value>
+    <comment>LoginView</comment>
+  </data>
+  <data name="LoginCompanyError" xml:space="preserve">
+    <value>Company is required!</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="LoginCompanyLabel" xml:space="preserve">
+    <value>Company</value>
+    <comment>Login Settings Window</comment>
+  </data>
+  <data name="LoginCompletedText" xml:space="preserve">
+    <value>Login Completed at {0}</value>
+    <comment>Login</comment>
+  </data>
+  <data name="LoginConnectText" xml:space="preserve">
+    <value>{0}:{1} at {2}</value>
+    <comment>Login</comment>
+  </data>
+  <data name="LoginDisconnectText" xml:space="preserve">
+    <value>{0}:{1} at {2}</value>
+    <comment>Login</comment>
+  </data>
+  <data name="LoginEditBoxTitle" xml:space="preserve">
+    <value>Add / Edit login details</value>
+    <comment>Login Settings Window</comment>
+  </data>
+  <data name="LoginFailedToConnectText" xml:space="preserve">
+    <value>Failed to Connect (Host: {0} , Port:{1}, Company:{2}, Use SSL: {3}, at {4})</value>
+    <comment>Login</comment>
+  </data>
+  <data name="LoginHostError" xml:space="preserve">
+    <value>Host is required!</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="LoginHostLabel" xml:space="preserve">
+    <value>Host</value>
+    <comment>Login Settings Window</comment>
+  </data>
+  <data name="LoginPortLabel" xml:space="preserve">
+    <value>Port</value>
+    <comment>Login Settings Window</comment>
+  </data>
+  <data name="LoginPortValueError" xml:space="preserve">
+    <value>Invalid value for Port!</value>
+    <comment>Settings</comment>
+  </data>
+  <data name="LoginSettingCancelButtonLabel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Login Settings Window</comment>
+  </data>
+  <data name="LoginSettingEditButtonLabel" xml:space="preserve">
+    <value>Edit</value>
+    <comment>Login Settings Window</comment>
+  </data>
+  <data name="LoginSettingTabTitle" xml:space="preserve">
+    <value>Login settings</value>
+    <comment>Login Settings Window</comment>
+  </data>
+  <data name="LoginUseSSLLabel" xml:space="preserve">
+    <value>Use SSL</value>
+    <comment>Login Settings Window</comment>
+  </data>
+  <data name="LoginWindowTitle" xml:space="preserve">
+    <value>Login</value>
+    <comment>LoginView</comment>
+  </data>
+  <data name="LogLevelHeader" xml:space="preserve">
+    <value>Level</value>
+    <comment>Log Settings in General Tab</comment>
+  </data>
+  <data name="LogNameHeader" xml:space="preserve">
+    <value>Name</value>
+    <comment>Log Settings in General Tab</comment>
+  </data>
+  <data name="LogSettingHeader" xml:space="preserve">
+    <value>Log settings</value>
+    <comment>Log Settings in General Tab</comment>
+  </data>
+  <data name="PasswordLabel" xml:space="preserve">
+    <value>Password</value>
+    <comment>LoginView</comment>
+  </data>
+  <data name="SettingApplyButtonLabel" xml:space="preserve">
+    <value>Apply</value>
+    <comment>Login Settings Window</comment>
+  </data>
+  <data name="SettingCancelButtonLabel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Login Settings Window</comment>
+  </data>
+  <data name="SettingOKButtonLabel" xml:space="preserve">
+    <value>OK</value>
+    <comment>Login Settings Window</comment>
+  </data>
+  <data name="SettingsButton" xml:space="preserve">
+    <value>Settings</value>
+    <comment>LoginView</comment>
+  </data>
+  <data name="ST_AggregateExecuted" xml:space="preserve">
+    <value>Aggregate Executed ($):</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_CreditLimit" xml:space="preserve">
+    <value>Credit Limit ($):</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_EnableSellShort" xml:space="preserve">
+    <value>Enable Sell Short:</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_EnableSellShortExempt" xml:space="preserve">
+    <value>Enable Sell Short Exempt:</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_MaxAmountPerOrder" xml:space="preserve">
+    <value>Max. $/Order (Equity):</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_MaxDuplicateOrder" xml:space="preserve">
+    <value>Max. Duplicate Orders:</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_MaxDuplicateOrderInterval" xml:space="preserve">
+    <value>Duplicate Order Interval (ms):</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_MaxNetTraded" xml:space="preserve">
+    <value>Max. Net Traded ($):</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_MaxPriceDiff" xml:space="preserve">
+    <value>Max. Erroneous Price (%):</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_MaxSharesPerOrder" xml:space="preserve">
+    <value>Max. Shares/Order (Equity):</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_MaxSharesPerOptionOrder" xml:space="preserve">
+    <value>Max. Shares/Order (Options):</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_MOCLOCAllowed" xml:space="preserve">
+    <value>MOC/LOC Allowed:</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_MOCLOCAllowedLatestTime" xml:space="preserve">
+    <value>MOC/LOC Cut-off Time:</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_SettingNotFoundFromServer" xml:space="preserve">
+    <value>(not found)</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="SyslogHostLable" xml:space="preserve">
+    <value>Syslog Host</value>
+    <comment>Log Settings in General Tab</comment>
+  </data>
+  <data name="UsernameLabel" xml:space="preserve">
+    <value>Username</value>
+    <comment>LoginView</comment>
+  </data>
+  <data name="AboutOKButton" xml:space="preserve">
+    <value>OK</value>
+    <comment>About Window</comment>
+  </data>
+  <data name="AboutWindowTitle" xml:space="preserve">
+    <value>About EZX Account Risk GUI</value>
+    <comment>About Window</comment>
+  </data>
+  <data name="ApplicationTitle" xml:space="preserve">
+    <value>EZX Account Risk Settings Manager  - {0}</value>
+    <comment>Main View</comment>
+  </data>
+  <data name="CopyrightText1" xml:space="preserve">
+    <value>Copyright (c) 2014 EZX inc.</value>
+    <comment>About Window</comment>
+  </data>
+  <data name="CopyrightText2" xml:space="preserve">
+    <value>All rights reserved</value>
+    <comment>About Window</comment>
+  </data>
+  <data name="VersionDateText" xml:space="preserve">
+    <value>Built on {0}</value>
+    <comment>About Window</comment>
+  </data>
+  <data name="VersionNumberText" xml:space="preserve">
+    <value>EZX Account Risk GUI - {0}</value>
+    <comment>About Window</comment>
+  </data>
+  <data name="ImportDataWindowTitle" xml:space="preserve">
+    <value>Import Data</value>
+    <comment>Import Window</comment>
+  </data>
+  <data name="ImportErrorWindowTitle" xml:space="preserve">
+    <value>Import Error</value>
+    <comment>Import Window</comment>
+  </data>
+  <data name="ST_EQUITYWASHCHECK" xml:space="preserve">
+    <value>Equities Wash Check:</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_OPTIONWASHCHECK" xml:space="preserve">
+    <value>Options Wash Check:</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_MaxAmountPerOptionOrder" xml:space="preserve">
+    <value>Max. $/Order (Options):</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_MaxOpenOrders" xml:space="preserve">
+    <value>Max. Open Orders:</value>
+    <comment>Risk Setting</comment>
+  </data>
+  <data name="ST_MaxOrderSize" xml:space="preserve">
+    <value>Max. Order Size:</value>
+    <comment>Risk Setting</comment>
+  </data>
+</root>

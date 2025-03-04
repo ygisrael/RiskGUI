@@ -1,0 +1,57 @@
+EZXApexRiskGUI project - How to Release
+
+When ready to release for testing/production: 
+
+1.1 Update the EZXApexRiskGUI\Properties\AssemblyInfo.cs file to increment the File Version and Product Version.  
+1.2 Update Resources.resx - CopyrightText1 year every January.
+1.3 Update View\AboutWindow.xaml.cs build date for each build.
+
+2. Synchronize changes with repository and get all incoming changes
+
+3. Run all unit tests.
+
+3. Check all changes into CVS.
+
+4. Update Bugzilla etc.
+
+5. To build/compile: When building EZXApexRiskGUI, select the "Debug / Any CPU" build configuration.  This should set all
+the projects to build with Platform Target = Any CPU (and with Debug flags). 
+
+The EZXApexRiskGUI build is configured to output compiled assemblies and executable to:
+	 EZXApexRiskGUI\bin\Debug 
+	 
+6. Create an installer using the Astrum Install Wizard
+
+The installer file is in C:\dev\EZXLightspeedWPFSolution\Installer\EZXApexRiskGUISetup.ai2
+(Be aware if you are working on branched code to use the correct path)
+Once open, change the version number and run "Create Setup"
+
+Update the version number in Installer settings to the new release version.
+
+7. Do a test run. Verify local installation worked correctly and some of the new changes are visible
+when using the new installed version.
+
+8. Check in Installer (and any more changes) to CVS
+
+9. Tag CVS with new Version, using form:  
+	EZXApexRiskGUI_r_<major>_<minor>_<build>  
+
+For example: EZXApexRisk_r_1_0_0
+
+Note that the following Projects need to be tagged:		
+	EZXApexRiskGUI
+	EZXLib	
+	EZXLightSpeedEngine	
+	EZXWPFLibrary
+	Installers	
+
+9. Zip the created installer file in C:\dev\EZXLightspeedWPFSolution\Installer and upload it (with WinSCP) to ftp.ezxinc.com
+   Folder: /home/content/31/6657231/html/downloads/EZXApexRiskGUI
+
+10. Update component version tracking: https://docs.google.com/spreadsheets/d/16QwSY0x7lxkqjr_065jcP7Jn1i9UAhK8A6UaHBJmFAI/edit#gid=1452582674
+    Make sure to add download link.
+	
+11. Pass to QA for testing: (include app name and version) https://docs.google.com/document/d/1LrREN6NP_gEC_57iH9IErB6ayIKR7SMGjmfT8T_ZIOQ/edit#heading=h.1d469387csfp
+
+NOTE: If branching code refer to http://192.168.1.93/index.php/Working_With_Branched_Code and
+	https://docs.google.com/spreadsheets/d/1sMoHH8ar30m73DN-oF1k2mi4xTeyjUr5-npOk57gqTY/edit#gid=286761046
