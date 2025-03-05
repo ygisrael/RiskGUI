@@ -44,12 +44,12 @@ namespace EZXApexRiskGUI.Model
                 Id = _id,
                 Settings = new EZXLib.Properties()                
             };
-
+            
             ga.Settings.PropertyMap = new TagValueMsg
             {
                 tagValues = new System.Collections.Hashtable
-                {
-                    ["TRADEONOFF"] = isEnabled
+            {
+                ["TRADEONOFF"] = isEnabled
                 }
             };
 
