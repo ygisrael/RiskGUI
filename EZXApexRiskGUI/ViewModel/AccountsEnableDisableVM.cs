@@ -132,7 +132,7 @@ namespace EZXApexRiskGUI.ViewModel
                 */
 
                 accountsList = GroupAccountWPF_MockData.AccountsList;
-
+                 
                 Mouse.OverrideCursor = Cursors.Arrow;
                 App.AppManager.GUILSEngine.StatusMessage = "Accounts loaded successfully.";
             }
