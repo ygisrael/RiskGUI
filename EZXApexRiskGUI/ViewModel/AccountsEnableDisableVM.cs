@@ -118,7 +118,7 @@ namespace EZXApexRiskGUI.ViewModel
         public List<GroupAccount> accList;
         internal void LoadAccounts()
         {
-            GroupAccountWPF_MockData md = new GroupAccountWPF_MockData();
+            GroupAccountWPF_MockData _ = new GroupAccountWPF_MockData();
 
             try
             {
@@ -131,7 +131,7 @@ namespace EZXApexRiskGUI.ViewModel
                 }
                 */
 
-                accountsList = GroupAccountWPF_MockData.accountsList;
+                accountsList = GroupAccountWPF_MockData.AccountsList;
 
                 Mouse.OverrideCursor = Cursors.Arrow;
                 App.AppManager.GUILSEngine.StatusMessage = "Accounts loaded successfully.";
